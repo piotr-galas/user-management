@@ -1,26 +1,9 @@
-angular_symfony
+user management
 ===============
 
-There are following package:
+User management system based on:
+(https://github.com/piotr-galas/symfony-angular)
 
- * symfony:
-  * FosRestBundle
-  * JmsSerializerBundle
- * Angular
-  * Bower
+After runinig composer run
 
-
-
-in main directory run install composer, update pareter yml and then run run.php
-
-                php run.php
-
-next in main directory run:
-
-                cd web
-                php -S localhost:8080
-
-Go in browser to
-
-               localhost:8080/app_dev.php/homepage
-
+       php run.php

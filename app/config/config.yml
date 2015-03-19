@@ -2,6 +2,7 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
+    - { resource: configs/fos_user_bundle.yml}
 
 framework:
     serializer:
