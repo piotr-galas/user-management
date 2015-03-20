@@ -1,9 +1,6 @@
 {% extends '::base.html.twig' %}
 
-{% block body %}
-    {% block content %}
-    {% endblock %}
-{% endblock %}
+
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('bower_components/bootstrap/dist/css/bootstrap.css') }}">
@@ -22,3 +19,7 @@
     <script src="{{ asset('bundles/app/js/services.js') }}"></script>
 {% endblock %}
 
+{% block body %}
+    {% block content %}
+    {% endblock %}
+{% endblock %}

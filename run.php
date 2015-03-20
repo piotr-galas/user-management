@@ -43,6 +43,13 @@ function execute_commands($commands, $output)
 
 $commands  = array(
     './app/console assets:install --symlink web',
+//    command below is not ready and wait for solve issue by doctrine team,
+//    https://github.com/doctrine/DoctrineBundle/issues/384
+//    Create your database manually
+
+//    './app/console doctrine:database:create --if-not-exists',
+    './app/console doctrine:schema:update --force',
+
     'bower install'
 );
 
