@@ -6,6 +6,9 @@ rest:
     resource: "@AppBundle/Resources/config/routing/rest.yml"
     prefix:   /
 
+angular:
+    resource: "@AppBundle/Resources/config/routing/angular.yml"
+    prefix:   /
 #
 #aisel_navigation:
 #    resource: "@AiselNavigationBundle/Resources/config/routing.yml"

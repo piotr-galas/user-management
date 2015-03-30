@@ -1,0 +1,3 @@
+index_app:
+    path:     /index
+    defaults: { _controller: AppBundle:Angular:index }

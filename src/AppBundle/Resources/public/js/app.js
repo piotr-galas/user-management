@@ -18,6 +18,7 @@ symfonyApp.config(['$routeProvider',
                 templateUrl: '../../bundles/app/partials/sample_array.html',
                 controller: 'Demo2Ctrl'
             }).
+
             when('/form', {
                 templateUrl: '../../bundles/app/partials/form.html',
                 controller: 'FormCtrl'
