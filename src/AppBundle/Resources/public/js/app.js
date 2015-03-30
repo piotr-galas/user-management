@@ -10,6 +10,10 @@ var symfonyApp = angular.module('symfonyApp', [
 symfonyApp.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
+            when('/login',{
+                templateUrl: 'login',
+                controller: 'LoginCtrl'
+            }).
             when('/phones', {
                 templateUrl: '../../bundles/app/partials/demo.html',
                 controller: 'DemoCtrl'

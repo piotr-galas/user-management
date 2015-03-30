@@ -32,3 +32,19 @@ symfonyControllers.controller('FormCtrl', function ($scope, $http) {
         $http.post('rest/register', data, {});
     }
 });
+
+symfonyControllers.controller('LoginCtrl', function ($scope, $http) {
+    $scope.form = {};
+//    $scope.form.firstName = 'wpisz imie';
+//    $scope.form.lastName = 'wpisz nazwisko';
+//
+//    $scope.submitForm =  function(item, event){
+//        var data = {
+//            firstName : $scope.form.firstName,
+//            lastName : $scope.form.lastName
+//        };
+//        console.log(data);
+    $scope.zmienna = 'ddd';
+//        $http.post('rest/register', data, {});
+
+});
