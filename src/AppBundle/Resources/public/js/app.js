@@ -5,7 +5,8 @@
 var symfonyApp = angular.module('symfonyApp', [
     'ngRoute',
     'symfonyControllers',
-    'symfonyDirectives'
+    'symfonyDirectives',
+    'symfonyServices'
 ]);
 
 symfonyApp.config(['$routeProvider',
