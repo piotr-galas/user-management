@@ -1,4 +1,5 @@
 {
+    "description": "This project try to connect symfony and angular",
     "name": "piotr/my_project_name",
     "license": "proprietary",
     "type": "project",

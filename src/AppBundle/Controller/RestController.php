@@ -28,7 +28,7 @@ class RestController extends FOSRestController
 
     public function registerAction(Request $request)
     {
-        var_dump($request->request->all());exit;
+        $request->request->all();
     }
 
 

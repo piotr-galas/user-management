@@ -9,7 +9,4 @@ rest:
 angular:
     resource: "@AppBundle/Resources/config/routing/angular.yml"
     prefix:   /
-#
-#aisel_navigation:
-#    resource: "@AiselNavigationBundle/Resources/config/routing.yml"
-#    prefix:   /
+
