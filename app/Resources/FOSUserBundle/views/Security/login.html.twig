@@ -7,7 +7,7 @@
 
 <form method="post" ng-submit="submitForm()">
 
-    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" ng-value="form._csrf_token" />
+    <input type="hidden"  name="_csrf_token" value="{{ csrf_token }}" ng-init="form._csrf_token='{{ csrf_token }}'"  />
 
     <label for="username">{{ 'security.login.username'|trans({}, 'FOSUserBundle') }}</label>
     <input type="text" id="username" name="_username" value="{{ last_username }}" ng-model="form._username" required="required" />
@@ -17,7 +17,9 @@
 
     <input type="checkbox" id="remember_me" name="_remember_me" ng-model="form._remember_me" value="on" />
     <label for="remember_me">{{ 'security.login.remember_me'|trans({}, 'FOSUserBundle') }}</label>
-    <input type="submit" id="_submit" name="_submit" ng-value="form._submit" value="{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}"  />
+    <input type="submit" id="_submit" name="_submit"
+           ng-init="form._submit='{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}'"
+           value="{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}"  />
 </form>
 
 
