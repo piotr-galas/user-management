@@ -2,7 +2,7 @@ var symfonyServices = angular.module('symfonyServices', []);
 
 symfonyServices.factory('send', function($http){
     return {
-        post: function(data, url){
+        post: function(data, url, callback){
             $http({
                 method: "POST",
                 url: url,
@@ -10,9 +10,7 @@ symfonyServices.factory('send', function($http){
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
                 data: $.param(data)
-            }).success(function(response){
-                return response;
-            });
+            }).success(callback);
         }
 
     }

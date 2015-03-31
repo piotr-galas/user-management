@@ -33,23 +33,16 @@ symfonyControllers.controller('FormCtrl', function ($scope, $http) {
     }
 });
 
-symfonyControllers.controller('LoginCtrl', function ($scope, send) {
+symfonyControllers.controller('LoginCtrl', function ($scope, send, $location) {
 
     $scope.submitForm =  function(){
-        data = $scope.form;
-        response = send.post(data,'login_check');
-        console.log(response)
+        send.post( $scope.form, 'login_check' ,function(response)
+        {
+            if(response.error){
+                alert(response.error);
+            }else{
+                $location.path('/sample_array')
+            }
+        });
     }
-//    $scope.form.firstName = 'wpisz imie';
-//    $scope.form.lastName = 'wpisz nazwisko';
-//
-//    $scope.submitForm =  function(item, event){
-//        var data = {
-//            firstName : $scope.form.firstName,
-//            lastName : $scope.form.lastName
-//        };
-//        console.log(data);
-
-//        $http.post('rest/register', data, {});
-
 });
