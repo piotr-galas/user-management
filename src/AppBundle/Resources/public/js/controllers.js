@@ -33,10 +33,12 @@ symfonyControllers.controller('FormCtrl', function ($scope, $http) {
     }
 });
 
-symfonyControllers.controller('LoginCtrl', function ($scope, $http) {
+symfonyControllers.controller('LoginCtrl', function ($scope, send) {
 
     $scope.submitForm =  function(){
-        console.log($scope.form);
+        data = $scope.form;
+        response = send.post(data,'login_check');
+        console.log(response)
     }
 //    $scope.form.firstName = 'wpisz imie';
 //    $scope.form.lastName = 'wpisz nazwisko';

@@ -16,6 +16,10 @@ symfonyApp.config(['$routeProvider',
                 templateUrl: 'login',
                 controller: 'LoginCtrl'
             }).
+//            when('/login_check',{
+//                templateUrl: 'login_check',
+//                controller: 'LoginCtrl'
+//            }).
             when('/phones', {
                 templateUrl: '../../bundles/app/partials/demo.html',
                 controller: 'DemoCtrl'
