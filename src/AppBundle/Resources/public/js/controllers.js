@@ -34,7 +34,10 @@ symfonyControllers.controller('FormCtrl', function ($scope, $http) {
 });
 
 symfonyControllers.controller('LoginCtrl', function ($scope, $http) {
-    $scope.form = {};
+
+    $scope.submitForm =  function(){
+        console.log($scope.form);
+    }
 //    $scope.form.firstName = 'wpisz imie';
 //    $scope.form.lastName = 'wpisz nazwisko';
 //
@@ -44,7 +47,7 @@ symfonyControllers.controller('LoginCtrl', function ($scope, $http) {
 //            lastName : $scope.form.lastName
 //        };
 //        console.log(data);
-    $scope.zmienna = 'ddd';
+
 //        $http.post('rest/register', data, {});
 
 });
