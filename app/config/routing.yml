@@ -9,5 +9,7 @@ _front:
 _fos_user:
     resource: routings/fos_user.yml
 
+_fos_js:
+    resource: routings/fos_js.yml
 
 

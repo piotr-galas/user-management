@@ -13,13 +13,9 @@ symfonyApp.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
             when('/login',{
-                templateUrl: 'login',
+                templateUrl: Routing.generate('override_fos_user_security_login'),
                 controller: 'LoginCtrl'
             }).
-//            when('/login_check',{
-//                templateUrl: 'login_check',
-//                controller: 'LoginCtrl'
-//            }).
             when('/phones', {
                 templateUrl: '../../bundles/app/partials/demo.html',
                 controller: 'DemoCtrl'

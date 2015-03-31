@@ -16,9 +16,13 @@
     <script src="{{ asset('bundles/app/js/filters.js') }}"></script>
     <script src="{{ asset('bundles/app/js/services.js') }}"></script>
     <script src="{{ asset('bundles/app/js/directives.js') }}"></script>
+
+    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
 {% endblock %}
 
 {% block body %}
     {% block content %}
     {% endblock %}
 {% endblock %}
+
