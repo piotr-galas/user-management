@@ -36,13 +36,19 @@ symfonyControllers.controller('FormCtrl', function ($scope, $http) {
 symfonyControllers.controller('LoginCtrl', function ($scope, send, $location) {
 
     $scope.submitForm =  function(){
-        send.post( $scope.form, 'login_check' ,function(response)
+        send.post( $scope.form, Routing.generate('fos_user_security_check') ,function(response)
         {
             if(response.error){
                 alert(response.error);
             }else{
+                alert('login successfull redirect to youtr page');
                 $location.path('/sample_array')
             }
         });
     }
 });
+
+symfonyControllers.controller('RegisterCtrl', function($scope, send){
+
+});
+

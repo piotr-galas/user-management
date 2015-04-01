@@ -3,6 +3,7 @@ imports:
     - { resource: security.yml }
     - { resource: services.yml }
     - { resource: configs/fos_user_bundle.yml}
+    - { resource: configs/fos_js.yml}
 
 framework:
     serializer:
@@ -75,3 +76,5 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+

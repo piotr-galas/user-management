@@ -31,6 +31,4 @@ class RestController extends FOSRestController
         $request->request->all();
     }
 
-
-
 }
