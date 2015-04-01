@@ -2,7 +2,6 @@ app:
     resource: "@AppBundle/Controller/"
     type:     annotation
 
-
 _front:
     resource: routings/front.yml
 
@@ -11,5 +10,3 @@ _fos_user:
 
 _fos_js:
     resource: routings/fos_js.yml
-
-

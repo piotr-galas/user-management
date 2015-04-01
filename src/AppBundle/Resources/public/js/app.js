@@ -17,7 +17,7 @@ symfonyApp.config(['$routeProvider',
                 controller: 'LoginCtrl'
             }).
             when('/register',{
-                templateUrl: Routing.generate('fos_user_registration_register'),
+                templateUrl: Routing.generate('override_fos_user_registration_register'),
                 controller: 'RegisterCtrl'
             }).
             when('/phones', {
