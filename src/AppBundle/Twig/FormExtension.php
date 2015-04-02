@@ -4,13 +4,19 @@ namespace AppBundle\Twig;
 
 class FormExtension extends \Twig_Extension
 {
-
-    public function getFunctions()
+    public function getFilters()
     {
         return array(
-            new \Twig_SimpleFunction('an_form_widget', null, array('node_class' => 'Symfony\Bridge\Twig\Node\SearchAndRenderBlockNode', 'is_safe' => array('html'))),
+            new \Twig_SimpleFilter('dot_encode', array($this, 'dotEncode')),
         );
     }
+
+    public function dotEncode($formVariable)
+    {
+        $modify = str_replace(']','',$formVariable);
+        return str_replace('[','.', $modify);
+    }
+
 
     public function getName()
     {

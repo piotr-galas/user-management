@@ -48,6 +48,17 @@ symfonyControllers.controller('LoginCtrl', function ($scope, send, $location) {
 });
 
 symfonyControllers.controller('RegisterCtrl', function($scope, send){
-
+    $scope.submitForm =  function(){
+        alert('ffg');
+//        send.post( $scope.form, Routing.generate('fos_user_security_check') ,function(response)
+//        {
+//            if(response.error){
+//                alert(response.error);
+//            }else{
+//                alert('login successfull redirect to youtr page');
+//                $location.path('/sample_array')
+//            }
+//        });
+    }
 });
 

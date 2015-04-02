@@ -43,9 +43,8 @@ class RegistrationController extends FOSRestController
             return $response;
         }
 
-
         return $this->renderRegister(array(
-                'form' => $form->createView()
+                'form' => $form->createView(),
             ));
     }
 

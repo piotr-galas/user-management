@@ -1,5 +1,6 @@
-<form  {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">
-    {{ an_form_widget(form) }}
+{#<form  {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">#}
+<form method="post" ng-submit="submitForm()">
+    {{ form_widget(form) }}
     <div>
         <input type="submit" value="{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}" />
     </div>
