@@ -2,12 +2,11 @@
 
 {# Widgets #}
 
-
-
 {%- block widget_attributes -%}
     id="{{ id }}" name="{{ full_name }}"
-    {% set angular = angular|default(true) %}
-    {%- if angular %}ng-model="{{ full_name|dot_encode }}" {% endif -%}
+
+    {{ block('angular_attributes') }}
+
     {%- if read_only %} readonly="readonly"{% endif -%}
     {%- if disabled %} disabled="disabled"{% endif -%}
     {%- if required %} required="required"{% endif -%}
@@ -22,3 +21,11 @@
         {%- endif -%}
     {%- endfor -%}
 {%- endblock widget_attributes -%}
+
+{%- block angular_attributes -%}
+    {% set angular = angular|default(true) %}
+    {%- if angular %}
+        ng-model="{{ 'form.' ~ full_name|dot_encode }}"
+        {%- if type == 'hidden' %}ng-init="{{ 'form.' ~ full_name|dot_encode }}='{{ value }}'" {% endif -%}
+    {% endif -%}
+{%-endblock angular_attributes -%}

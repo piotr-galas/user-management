@@ -17,7 +17,6 @@ class FormExtension extends \Twig_Extension
         return str_replace('[','.', $modify);
     }
 
-
     public function getName()
     {
         return 'app_form';
