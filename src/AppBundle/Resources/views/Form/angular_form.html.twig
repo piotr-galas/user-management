@@ -17,11 +17,6 @@
 {%- endblock form_widget_simple -%}
 
 
-
-
-
-
-
 {%- block widget_attributes -%}
     id="{{ id }}" name="{{ full_name }}"
     {{ block('angular_attributes') }}
@@ -42,7 +37,6 @@
 {%- endblock widget_attributes -%}
 
 {%- block angular_attributes -%}
-
     {% set angular = angular|default(true) %}
     {%- if angular %}
         ng-model="{{ 'form.' ~ full_name|dot_encode }}"
