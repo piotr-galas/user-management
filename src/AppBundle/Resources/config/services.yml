@@ -1,6 +1,0 @@
-services:
-    app.twig_extension:
-        class: AppBundle\Twig\FormExtension
-        public: false
-        tags:
-            - { name: twig.extension }

@@ -1,0 +1,6 @@
+services:
+    user.registration.form.type:
+        class: Piga\NgUserBundle\Form\Type\RegistrationFormType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: piga_nguser_registration }

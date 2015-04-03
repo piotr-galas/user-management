@@ -35,7 +35,7 @@ twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
     form_themes:
-         - 'AppBundle:Form:angular_form.html.twig'
+         - 'PigaNgBaseBundle:Form:angular_form.html.twig'
 
 # Assetic Configuration
 assetic:

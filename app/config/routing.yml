@@ -1,6 +1,6 @@
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+#app:
+#    resource: "@PigaNgBaseBundle/Controller/"
+#    type:     annotation
 
 _front:
     resource: routings/front.yml
