@@ -22,5 +22,35 @@ class RegistrationFormType extends BaseType
         return 'user_registration';
     }
 
+    public function finishView(FormView $view, FormInterface $form, array $options)
+    {
+        $params = array(
+            'angular'=>true,
+        );
+
+        $this->setParam( $view, $params);
+
+    }
+
+    private function setParam(FormView $view, array $params)
+    {
+        $this->updateParam($view, $params);
+        $this->updateChild($view, $params);
+    }
+
+    private function updateChild(FormView $parent, array $params)
+    {
+        foreach ($parent->children as $child){
+            $this->updateParam($child, $params);
+            $this->updateChild($child, $params);
+        }
+    }
+
+    private function updateParam(FormView $view, array $params)
+    {
+        foreach($params as $key => $value){
+            $view->vars[$key] = $value;
+        }
+    }
 
 }

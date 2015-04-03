@@ -2,9 +2,28 @@
 
 {# Widgets #}
 
+{%- block form_widget -%}
+    {#{{ dump(form) }}#}
+    {% if compound %}
+        {{- block('form_widget_compound') -}}
+    {% else %}
+        {{- block('form_widget_simple') -}}
+    {% endif %}
+{%- endblock form_widget -%}
+
+{%- block form_widget_simple -%}
+    {%- set type = type|default('text') -%}
+    <input type="{{ type }}" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
+{%- endblock form_widget_simple -%}
+
+
+
+
+
+
+
 {%- block widget_attributes -%}
     id="{{ id }}" name="{{ full_name }}"
-
     {{ block('angular_attributes') }}
 
     {%- if read_only %} readonly="readonly"{% endif -%}
@@ -23,6 +42,7 @@
 {%- endblock widget_attributes -%}
 
 {%- block angular_attributes -%}
+
     {% set angular = angular|default(true) %}
     {%- if angular %}
         ng-model="{{ 'form.' ~ full_name|dot_encode }}"
