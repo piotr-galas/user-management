@@ -1,11 +1,3 @@
-homepage:
-    resource: "@PigaNgBaseBundle/Resources/config/routing/homepage.yml"
-    prefix:   /
-
-rest:
-    resource: "@PigaNgBaseBundle/Resources/config/routing/rest.yml"
-    prefix:   /
-
 angular:
     resource: "@PigaNgBaseBundle/Resources/config/routing/angular.yml"
     prefix:   /

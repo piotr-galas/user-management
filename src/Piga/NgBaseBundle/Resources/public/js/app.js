@@ -20,20 +20,7 @@ symfonyApp.config(['$routeProvider',
                 templateUrl: Routing.generate('override_fos_user_registration_register'),
                 controller: 'RegisterCtrl'
             }).
-            when('/phones', {
-                templateUrl: '../../bundles/pigangbase/partials/demo.html',
-                controller: 'DemoCtrl'
-            }).
-            when('/sample_array', {
-                templateUrl: '../../bundles/pigangbase/partials/sample_array.html',
-                controller: 'Demo2Ctrl'
-            }).
-
-            when('/form', {
-                templateUrl: '../../bundles/pigangbase/partials/form.html',
-                controller: 'FormCtrl'
-            }).
             otherwise({
-                redirectTo: '/phones'
+                redirectTo: '/login'
             });
     }]);

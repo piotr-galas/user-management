@@ -1,7 +1,0 @@
-hello:
-    pattern:  /rest/index.{_format}
-    defaults: { _controller: PigaNgBaseBundle:Rest:index, _format: html }
-
-register:
-    pattern:  /rest/register
-    defaults: { _controller: PigaNgBaseBundle:Rest:register, _format: html }
